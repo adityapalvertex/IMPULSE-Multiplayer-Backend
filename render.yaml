@@ -1,0 +1,21 @@
+# OPTIONAL Render "Blueprint". The Android guide uses the manual form instead; this file is only a shortcut.
+# Secrets are never stored here: the three sync:false values are typed into Render's dashboard.
+services:
+  - type: web
+    name: impulse
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false

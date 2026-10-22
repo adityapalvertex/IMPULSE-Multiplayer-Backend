@@ -1,0 +1,19 @@
+{
+  "name": "impulse-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IMPULSE game + online multiplayer race server (HTTP + WebSocket) in one app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node test/syntax-check.js",
+    "test": "node test/syntax-check.js && node test/protocol.test.js && node test/hosting.test.js",
+    "smoke": "node test/multiplayer.smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
